@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function(score)
+            const Fizz = num % 3 == 0;
+            const Buzz = num % 5 == 0;
+            const FizzBuzz = num % 15 == 0();
+            const Num = Number;
+
+            if (num % 15 == 0)
+                    'Fizz';
+                else if (num % 5 == 0)
+                    'Buzz';
+                else {
+                    if (num % 3 == 0)
+                    'FizzBuzz';
+                }
+            let resTag = document.getElementById('Num');
+            resTag.innerHTML = '<h4>score</h4>'
+    </script>
+</head>
+<body style="margin: 50px;">
+    <input type="text" id="Num" placeholder="숫자입력">
+    <button onclick="score()">시작</button>
+    <p id="result"></p>
+</body>
+</html>
