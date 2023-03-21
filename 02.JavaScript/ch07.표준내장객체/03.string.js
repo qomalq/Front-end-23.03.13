@@ -66,6 +66,7 @@ function myDatetime() {
     `${twoDigit(now.getHours())}:${twoDigit(now.getMinutes())}:${twoDigit(now.getSeconds())}`;
 }
 
+
 let now = myDatetime();
 console.log(now);
 console.log(now.substring(2));
@@ -75,13 +76,17 @@ console.log(' hello '.trim());
 console.log('33'.split('3').length);
 // 1에서 1000까지 숫자가 있다.
 // 0은 몇번, 1은 몇번, ..., 9는 몇번 사용되는가?
+function strCount(str, dst) {
+    return str.split(dst).length - 1;   //str 에서 dst 가 몇번 사용되는가
+}
 let numStr = ''
 for(let i = 1; i < 1000; i++){
   numStr += i;
 }
 
 for( let num = 0; num <=9; num++) {
-    let count = numStr.split(String(num)).length-1;
+   // let count = numStr.split(String(num)).length-1;
+   let count = strCount(numStr, String(num));
     console.log(`${num}은/는 ${count}번 사용됨.`)
 }
 

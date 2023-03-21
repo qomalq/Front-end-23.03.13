@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성 순서</title>
+    <script>
+        function isPalindrome(str) {
+                let reverseStr = '';
+                for (let i = str.length - 1; i >= 0; i--)
+                    reverseStr += str[i];
+                return str == reverseStr;
+         }
+            let numTag = document.getElementById('num');
+            let numStr = numTag.value;  
+            let num = Number(numStr);  
+            num = Number(document.getElementById('num').value);
+            let resTag = document.getElementById('result');
+            if (isPalindrome = true) {
+                resTag.innerHTML = '<h4>true</h4>'
+            }
+            else{
+                resTag.innerHTML = '<h4>false</h4>'
+            }
+    </script>
+</head>
+<body>
+    <h1>IsPalindrome</h1>
+    <div class="col">
+        <form action="/">
+          <input type="fiele" id="IsPalindrome" name="isPalindrome"> <br>
+        </form>
+      </div>
+    <button onclick="isPalindrome()">확인</button>
+    <p id="result"></p>
+</body>
+</html>
