@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1</title>
+    <script>
+        function x() {
+            let num1 ='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20'.split
+            let num2 ='11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30'.split
+    
+            if ((num1<1)||(num1>20)||(num2<10)||(num2>30)||(num1>(num2-4))){
+                alert('다시 입력하세요.')
+                return;
+                for(let i = num1; i<= num2; i++)
+                result.push(i);
+                let result = 2**i;
+                document.getElementById('result').innerHTML = i;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button onclick="x()">확인</button>
+    <h3 id="result"></h3>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 2</title>
+    <script>
+        let text = 'textarea'
+        text.replace(/[',.-]/g, ''); 
+        text.replace(/[A-Z]/g,'a-z');
+        text.split;
+        let count = 0;
+        for(let word of text)
+        if(word == 'the'){
+            count++
+        } else {
+            word != 'them', 'there', 'their';
+        }
+        document.getElementById('textarea').innerHTML = count;
+    </script>
+</head>
+<body>
+    <h1>다음 문자열에서 'the'의 개수를 구하시오</h1>
+   <textarea name="" id="textarea" cols="60" rows="11">
+    the grown-ups' response, this time, was to advise me to lay aside my drawings of boa constrictors, whether from the inside or the outside, and devote myself instead to geography, history, arithmetic, and grammar. That is why, at the, age of six, I gave up what might have been a magnificent career as a painter. I had been disheartened by the failure of my Drawing Number One and my Drawing Number Two. Grown-ups never understand anything by themselves, and it is tiresome for children to be always and forever explaining things to the.
+   </textarea>
+    <h4 id="result2"></h>
+    
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numStr = '51900;83000;158000;367500;250000;59200;128500;1304000'
+        numArr= numStr.split(';')
+            return b -a
+        document.getElementById('result3').innerHTML = numArr;
+    </script>
+</head>
+<body>
+    <h5 id="result3"></h5>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단순 디지털 시계</title>
+    <script>
+        function twoDigit(num) {
+            return (num < 10) ? '0' + num : String(num);
+        }
+        function myDatetime(date) {
+            return `${date.getFullYear()}-${twoDigit(date.getMonth()+1)}-${twoDigit(date.getDate())} ` +
+                    `${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
+}
+        window.onload = function() {
+            setInterval(function() {
+                const now = new Date();
+                const week = ['일','월','화','수','목','금','토']
+                let dateStr = myDatetime(now).substring(2, 10);
+                dateStr += '(' + week[now.getDay()] + ')';
+                const timeStr = myDatetime(now).substring(11, 19);
+                h1.src = 'digits/' +timeStr[0]+'.svg'
+                h2.src = 'digits/' +timeStr[1]+'.svg'
+                m1.src = 'digits/' +timeStr[3]+'.svg'
+                m2.src = 'digits/' +timeStr[4]+'.svg'
+                s1.src = 'digits/' +timeStr[6]+'.svg'
+                s2.src = 'digits/' +timeStr[7]+'.svg'
+                document.getElementById('date').innerHTML = dateStr;
+                document.getElementById('time').innerHTML = timeStr; 
+                
+
+            }, 1000);
+        }
+    </script>
+</head>
+<body style="margin: 40px;">
+    <hr>
+    <h2 id="date"></h2>
+    <hr>
+    <h1 id="time"></h1>
+    <img id="h1" style="height: 20px;">
+    <img id="h2" style="height: 20px;">
+    <img id="c1" style="height: 20px;"> 
+    <img id="m1" style="height: 20px;">
+    <img id="m2" style="height: 20px;">
+    <img id="c2" style="height: 20px;"> 
+    <img id="s1" style="height: 20px;">
+    <img id="s2" style="height: 20px;">
+
+</body>
+</html>
