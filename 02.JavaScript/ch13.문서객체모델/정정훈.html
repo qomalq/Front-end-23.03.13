@@ -47,16 +47,16 @@
     <title>문제 2</title>
     <script>
     function the(){
-        let text = 'textarea'
-        let textThe = text.replace(/[',.-]/g, ''); text.replace(/[A-Z]/g,'a-z').split;
+        let search = document.getElementById('search').value.trim;
+        let searching = search.replace(/[',.-]/g, ''); text.replace(/[A-Z]/g,'a-z').toLowerCase();
+        let word = searching.split
         let count = 0
-        for(i = 0; i <textThe; i++)
-        if(textThe[i]=='the'){
+        for(i = 0; i <word; i++)
+        if(word[i]=='search'){
             count+= 1;
         } else {
-            textThe != 'them', 'there', 'their';
         }
-        document.getElementById('result2').innerHTML = count;
+        document.getElementById('result2').innerHTML = `the 의 갯수는 ${count} 입니다`;
     }
     </script>
 </head>
@@ -65,7 +65,7 @@
    <textarea name="" id="textarea" cols="60" rows="11">
     the grown-ups' response, this time, was to advise me to lay aside my drawings of boa constrictors, whether from the inside or the outside, and devote myself instead to geography, history, arithmetic, and grammar. That is why, at the, age of six, I gave up what might have been a magnificent career as a painter. I had been disheartened by the failure of my Drawing Number One and my Drawing Number Two. Grown-ups never understand anything by themselves, and it is tiresome for children to be always and forever explaining things to the.
    </textarea>
-   <input type="text" id="text">
+   <input type="text" id="search" placeholder="찾을 단어">
     <h4 id="result2"></h>
     <button onclick="the()">찾기</button>
     
@@ -82,11 +82,17 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>내림차순</title>
     <script>
-        let numStr = document.getElementById('num6')
-        numArr.sort(function(a, b){
-                    return b - a;
-                })
-        document.getElementById('result3').innerHTML = <h4>'결과는'</h4> + numArr;
+        function des() {
+            let numStr = document.getElementById('num6').value;
+            let numArr = numStr.split(';');
+            let newNum = [];
+            for(let num6 of numArr)
+                nuwNum.push(parseInt(num6));
+            newNum.sort(function(a, b){
+                        return b - a;
+                    });
+            document.getElementById('result3').innerHTML = newNum;
+            }
     </script>
 </head>
 <body>
