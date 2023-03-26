@@ -7,66 +7,73 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-
+  <style>
+    body{
+      background-image: url(배경.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+  </style>
 </head>
 <body> 
-    <div class="container-fluid mt-3 bg-dark text-white text-center">
-            <h1>Introduction</h1>
+    <div class="container-fluid mt-3 text-center">
+            <h1 style="font-size: 100px;">소개</h1>
     </div>
 
     <div class="row">
         <div class="col">
             <div class="container mt-3">
-                <div class="card img-fluid" id="card" style="width:300px">
+                <div class="card img-fluid" id="card" style="background: none; border-style: none;">
                         <img class="card-img-top" src="user-profile-02.svg" alt="Card image" style="width:100%">
                         <hr>
                         <div class="card-img-top">
-                        <p class="card-text">이름 : 정정훈</p>
-                        <p class="card-text">나이 : 25</p>
-                        <p class="card-text">이메일 : rmsdnr45@naver.com </p>
-                        <p class="card-text">거주지 : 성남시 분당구 금곡동</p>
+                        <p class="card-text"> <img src="image-avatar.svg">이름 : 정정훈</p>
+                        <p class="card-text"> <img src="arrow-right-square-contained.svg">나이 : 25</p>
+                        <p class="card-text"> <a href="https://www.naver.com/"> <button style="padding: 2px; background: none; border-style: none;" id="e"><img src="email.svg"></button></a></img>이메일 : rmsdnr45@naver.com </p>
+                        <p class="card-text"> <a href="https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EA%B8%88%EA%B3%A1%EB%8F%99/address/14149492.36053386,4488235.862271633,%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EA%B8%88%EA%B3%A1%EB%8F%99,adm?c=13,0,0,0,dh&isCorrectAnswer=true">
+                          <button style="padding: 2px; background: none; border-style: none;" id="m"><img src="marker-02.svg"></button></a></img>거주지 : 성남시 분당구 금곡동</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col">
                 <div class="d-grid">
-                    <button type="button" class="btn btn-primary btn-block dropdown-toggle" data-bs-toggle="dropdown">
+                    <button style="height: 800px; width: 400px; background-position: center; background-image: url(취미.jpg); border-style: none; color: black;" type="button" class="btn btn-primary btn-block dropdown-toggle" data-bs-toggle="dropdown">
                        <h1>
                         취미
                        </h1>
                     </button>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="file:///D:/workspace/01FrontEnd/%EC%86%8C%EA%B0%9C/%ED%81%B4%EB%9D%BC/%ED%81%B4%EB%9D%BC%EB%A6%AC%EB%84%B7.html">클라리넷 연주</a></li>
-                        <li><a class="dropdown-item" href="file:///D:/workspace/01FrontEnd/%EC%86%8C%EA%B0%9C/%EC%98%81%EC%83%81/%EC%98%81%EC%83%81.html">영화 드라마 등 영상 시청</a></li>
-                        <li><a class="dropdown-item" href="#">게임</a></li>
+                        <li><a class="dropdown-item" href="클라리넷.html">클라리넷 연주</a></li>
+                        <li><a class="dropdown-item" href="영상.html">영화 드라마 등 영상 시청</a></li>
                       </ul>
                 </div>
         </div>
         <div class="col">
                 <div class="d-grid">
-                    <button type="button" class="btn btn-primary btn-block dropdown-toggle" data-bs-toggle="dropdown">
+                    <button style="height: 800px; width: 400px; background-position: center; background-image: url(여행.jpg); border-style: none; color: black" type="button" class="btn btn-primary btn-block dropdown-toggle" data-bs-toggle="dropdown">
                        <h1>
                         여행지
                        </h1>
                     </button>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="file:///D:/workspace/01FrontEnd/%EC%86%8C%EA%B0%9C/%EB%AF%B8%EA%B5%AD/%EB%AF%B8%EA%B5%AD.html">미국</a></li>
-                        <li><a class="dropdown-item" href="file:///D:/workspace/01FrontEnd/%EC%86%8C%EA%B0%9C/%EC%9C%A0%EB%9F%BD/%EC%9C%A0%EB%9F%BD.html">유럽</a></li>
-                        <li><a class="dropdown-item" href="file:///D:/workspace/01FrontEnd/%EC%86%8C%EA%B0%9C/%EC%8B%B1%EA%B0%80%ED%8F%AC%EB%A5%B4/%EC%8B%B1%EA%B0%80%ED%8F%AC%EB%A5%B4.html">싱가포르</a></li>
+                        <li><a class="dropdown-item" href="미국.html">미국</a></li>
+                        <li><a class="dropdown-item" href="유럽.html">유럽</a></li>
+                        <li><a class="dropdown-item" href="싱가포르.html">싱가포르</a></li>
                       </ul>
                 </div>
         </div>
         <div class="col">
                 <div class="d-grid">
-                    <button type="button" class="btn btn-primary btn-block dropdown-toggle" data-bs-toggle="dropdown">
+                    <button style="height: 800px; width: 400px; background-position: center; background-image: url(음식.jpg); border-style: none; color: black" type="button" class="btn btn-primary btn-block dropdown-toggle" data-bs-toggle="dropdown">
                        <h1>
                         음식
                        </h1>
                     </button>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="file:///D:/workspace/01FrontEnd/%EC%86%8C%EA%B0%9C/%ED%95%9C%EC%8B%9D/%ED%95%9C%EC%8B%9D.html">한식</a></li>
-                        <li><a class="dropdown-item" href="file:///D:/workspace/01FrontEnd/%EC%86%8C%EA%B0%9C/%EC%9D%BC%EC%8B%9D/%EC%9D%BC%EC%8B%9D.html">일식</a></li>
+                        <li><a class="dropdown-item" href="한식.html">한식</a></li>
+                        <li><a class="dropdown-item" href="일식.html">일식</a></li>
                       </ul>
                 </div>
         </div>
