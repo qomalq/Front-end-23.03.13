@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>단순 디지털 시계</title>
     <script>
-        window.onload= function(){
-            let input1 = document.querySelectorAll('input')[0];
-            let input2 = document.querySelectorAll('input')[1];
-
-            input1.onkeyup = function(e) {
-                if (input1.value.length >= 6)
-                    input2.foucus();
-            }
-            input2.onkeyup = function(e) {
-                let event = e || window.event;      //이벤트 객체 추출
-                if(event.keyCode == 8 && uboyt2.value.length == 0)      //글자가 없고 백스페이스
-                input1.focus();
-            }
+        function twoDigit(num) {
+            return (num < 10) ? '0' + num : String(num);
         }
-     
+        function myDatetime(date) {
+            return `${date.getFullYear()}-${twoDigit(date.getMonth()+1)}-${twoDigit(date.getDate())} ` +`${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
+        }
+        window.onload = function() {
+            setInterval(function() {
+                const now = new Date();
+                const week = '일월화수목금토'.split('');          
+                let dateStr = myDatetime(now).substring(2, 10);    
+                dateStr += '(' + week[now.getDay()] + ')';         
+                const timeStr = myDatetime(now).substring(11, 19); 
+                document.getElementById('date').innerHTML = dateStr;
+                document.getElementById('time').innerHTML = timeStr;
+            }, 1000);
+        }
     </script>
 </head>
 <body style="margin: 40px;">
-    주민등록번호 : <input type="text" maxlength="6" autofocus>
-    <span>-</span>
-    <input type="text" maxlength="7">
+    <h2 id="date"></h2>
+    <hr>
+    <h1 id="time"></h1>
 </body>
 </html>
